@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WhatsappTema</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_register">Register</string>
+    <string name="welcome_text">Login to your account. Don\'t have an account? Sign Up Free</string>
+    <string name="tb_email">Enter email</string>
+    <string name="tb_password">Enter password</string>
+    <string name="tb_phone">Enter phone number</string>
+    <string name="tb_confirmpassword">Confirm password</string>
+</resources>
