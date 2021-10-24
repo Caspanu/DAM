@@ -8,7 +8,7 @@
     tools:context=".MainActivity2">
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress2"
+        android:id="@+id/etEmailReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="130dp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/etPhoneReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -35,10 +35,10 @@
         android:textColorHint="@color/bangladesh_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmailReg" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/etPassReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -51,10 +51,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/etPhoneReg" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/etPassConfirmationReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -67,10 +67,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/etPassReg" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnRegisterReg"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
@@ -79,5 +79,5 @@
         android:textColor="@color/white_chocolate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
+        app:layout_constraintTop_toBottomOf="@+id/etPassConfirmationReg" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,13 +28,13 @@
         android:text="@string/btn_login"
         android:textColor="@color/white_chocolate"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnregister"
+        app:layout_constraintEnd_toStartOf="@+id/btnRegisterLog"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextContrastCheck" />
 
     <Button
-        android:id="@+id/btnregister"
+        android:id="@+id/btnRegisterLog"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginEnd="60dp"
@@ -62,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/etEmailLog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -77,7 +77,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/etPassLog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -89,6 +89,6 @@
         android:textColorHint="@color/bangladesh_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmailLog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
