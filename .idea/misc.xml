@@ -3,8 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/artof/AndroidStudioProjects/WhatsappTema/app/src/main/res/drawable/background.xml" value="0.2755208333333333" />
+        <entry key="..\:/Users/artof/AndroidStudioProjects/WhatsappTema/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2755208333333333" />
+        <entry key="..\:/Users/artof/AndroidStudioProjects/WhatsappTema/app/src/main/res/layout/activity_content_screen.xml" value="0.264" />
         <entry key="..\:/Users/artof/AndroidStudioProjects/WhatsappTema/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/artof/AndroidStudioProjects/WhatsappTema/app/src/main/res/layout/activity_main2.xml" value="0.264" />
+        <entry key="..\:/Users/artof/AndroidStudioProjects/WhatsappTema/app/src/main/res/layout/content_screen.xml" value="0.2210144927536232" />
+        <entry key="..\:/Users/artof/AndroidStudioProjects/WhatsappTema/app/src/main/res/layout/item_meniuri.xml" value="0.264" />
       </map>
     </option>
   </component>

@@ -14,6 +14,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private Button btnRegister;
+    private Button btnLogin;
     private EditText etEmailLog;
     private EditText etPassLog;
     private final int mainActivityRequest = 100;
@@ -28,15 +29,23 @@ public class MainActivity extends AppCompatActivity {
         Log.v("lifecycle", "onCreate");
 
         btnRegister = findViewById(R.id.btnRegisterLog);
+        btnLogin = findViewById(R.id.btnLogin);
         etEmailLog = findViewById(R.id.etEmailLog);
         etPassLog = findViewById(R.id.etPassLog);
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(MainActivity.this, "A reusit!", Toast.LENGTH_SHORT).show();
-                Intent registerWindow = new Intent(MainActivity.this, MainActivity2.class);
+                Intent registerScreen = new Intent(MainActivity.this, MainActivity2.class);
                 //startActivity(registerWindow);
-                startActivityForResult(registerWindow, mainActivityRequest);
+                startActivityForResult(registerScreen, mainActivityRequest);
+            }
+        });
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent contentScreen = new Intent (MainActivity.this,ContentScreenActivity.class);
+                startActivity(contentScreen);
             }
         });
     }
