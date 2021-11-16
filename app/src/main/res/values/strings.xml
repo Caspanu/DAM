@@ -8,4 +8,5 @@
     <string name="tb_phone">Enter phone number</string>
     <string name="tb_confirmpassword">Confirm password</string>
     <string name="Whatsapp">Whatsapp</string>
+    <string name="btn_update">Update</string>
 </resources>

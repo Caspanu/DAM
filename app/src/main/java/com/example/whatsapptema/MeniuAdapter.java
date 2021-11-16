@@ -45,4 +45,10 @@ public class MeniuAdapter extends BaseAdapter {
         tvData.setText(current.getData());
         return itemView;
     }
+
+    public void update_list(List<Conversatie> lst){
+        this.lista.clear();
+        this.lista.addAll(lst);
+        notifyDataSetChanged();
+    }
 }

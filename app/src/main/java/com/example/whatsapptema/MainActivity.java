@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toast.makeText(this, "WhatsApp", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "WhatsApp", Toast.LENGTH_SHORT).show();
 
         Log.v("lifecycle", "onCreate");
 
@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent contentScreen = new Intent (MainActivity.this,ContentScreenActivity.class);
+                //startActivity(contentScreen);
                 startActivity(contentScreen);
             }
         });
