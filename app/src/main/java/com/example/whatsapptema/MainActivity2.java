@@ -31,7 +31,8 @@ public class MainActivity2 extends AppCompatActivity {
                 if (isValid()) {
                     User u1 = new User();
                     u1.setEmail(etEmail.getText().toString());
-                    u1.setPhone(Integer.parseInt(etPhone.getText().toString()));
+//                    u1.setPhone(Integer.parseInt(etPhone.getText().toString()));
+                    u1.setPhone(etPhone.getText().toString());
                     u1.setPass(etPass.getText().toString());
                     u1.setPassConf(etPassConf.getText().toString());
                     Toast.makeText(MainActivity2.this, u1.toString(), Toast.LENGTH_SHORT).show();

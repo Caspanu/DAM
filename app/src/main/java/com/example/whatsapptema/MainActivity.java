@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button btnRegister;
@@ -18,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText etEmailLog;
     private EditText etPassLog;
     private final int mainActivityRequest = 100;
+    private UserDAO userDAO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         etEmailLog = findViewById(R.id.etEmailLog);
         etPassLog = findViewById(R.id.etPassLog);
+
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(registerScreen, mainActivityRequest);
             }
         });
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,6 +55,28 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(contentScreen);
             }
         });
+
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                userDAO = Database.getInstance(MainActivity.this).getDatabase().userDAO();
+                List<User> lista = getUsers();
+                userDAO.deleteAll();
+                for(int i=0; i<lista.size();i++){
+                    userDAO.insertAll(lista.get(i));
+                }
+            }
+        });
+        thread.start();
+    }
+
+    public List<User> getUsers(){
+        User u1 = new User("IonAndrei@yahoo.com", "0745254524", "parola123", "parola123");
+        User u2 = new User("AlexStanciu@yahoo.com", "0763423423", "ParolaGREa", "ParolaGREa");
+        List<User> lista = new ArrayList<>();
+        lista.add(u1);
+        lista.add(u2);
+        return lista;
     }
 
     @Override
