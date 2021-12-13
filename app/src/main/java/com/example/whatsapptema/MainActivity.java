@@ -11,6 +11,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         thread.start();
+        writeToDataBase();
+        readFromDatabase();
     }
 
     public List<User> getUsers(){
@@ -92,6 +100,39 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    private void writeToDataBase(){
+        FirebaseDatabase database = FirebaseDatabase.getInstance("https://whatsapptema-3a46e-default-rtdb.firebaseio.com/");
+        DatabaseReference myRef = database.getReference("User");
+        for (int i=0;i<getUsers().size();i++){
+            User u = new User (getUsers().get(i).getEmail(),
+                    getUsers().get(i).getPhone(),getUsers().get(i).getPass(),
+                    getUsers().get(i).getPassConf());
+            myRef.child("User number "+ i).setValue(u);
+        }
+    }
+
+    private void readFromDatabase(){
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("User");
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot dataSnapshot1:dataSnapshot.getChildren()){
+                    User u = new User(dataSnapshot1.getValue(User.class).getEmail(),
+                            dataSnapshot1.getValue(User.class).getPhone(),
+                            dataSnapshot1.getValue(User.class).getPass(),
+                            dataSnapshot1.getValue(User.class).getPassConf());
+                    Log.d("citire","User citit " + u.toString());
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                Log.w("cancelled", "Failed to read value.", error.toException());
+            }
+        });
     }
 
     @Override

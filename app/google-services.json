@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "302112730177",
+    "project_id": "whatsapptema-3a46e",
+    "storage_bucket": "whatsapptema-3a46e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302112730177:android:1bfe0349618f9f624f2ac0",
+        "android_client_info": {
+          "package_name": "com.example.whatsapptema"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "302112730177-ofgjndnqv0e0djenn5aq7ds00p81jie2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqupbs3bM49_hyixQhkp7bAGG-Asl_gOM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "302112730177-ofgjndnqv0e0djenn5aq7ds00p81jie2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
